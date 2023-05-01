@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<span style='color:#ff9900;'><h1 style="text-align:center;font-family:verdana">Amazon Price Tracker</h1></span>
+<form method="POST" action="">
+    {% csrf_token %}
+    <p>Are you sure! Do you want to delete the Item?</p>
+    <p style="color:blue;">Item Name : {{object.name}}</p>
+    <hr>
+    <button class="btn btn-primary" type="submit">Yes</button>
+    <button class="btn btn-danger" type="submit">NO</button>
+</form>
+{% endblock content %}
